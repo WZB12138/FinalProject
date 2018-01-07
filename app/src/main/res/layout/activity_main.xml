@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.caltimer.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/wheelview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_timer"
+        android:layout_alignParentStart="true">
+
+        <com.example.hp.app.stp.wheelview.view.WheelView
+            android:id="@+id/wheelViewHour1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <com.example.hp.app.stp.wheelview.view.WheelView
+            android:id="@+id/wheelViewMinute1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/to"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:text="-"
+            android:textSize="50sp"
+            android:gravity="center"/>
+
+        <com.example.hp.app.stp.wheelview.view.WheelView
+            android:id="@+id/wheelViewHour2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <com.example.hp.app.stp.wheelview.view.WheelView
+            android:id="@+id/wheelViewMinute2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wheelview"
+        android:layout_centerInParent="true"
+        android:text="确定"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/shape"
+        android:layout_marginTop="50dp"/>
+
+</RelativeLayout>
