@@ -1,18 +1,22 @@
 package com.example.hp.app.stp.wheelview.view;
 
 /**
- * 条目改变监听器
+ * WheelView 滚动监听器
  */
-public interface OnWheelChangedListener {
+public interface OnWheelScrollListener {
     /**
-     * 当前条目改变时回调该方法
+     * 在 WheelView 滚动开始的时候回调该接口
      * 
      * @param wheel
-     *            条目改变的 WheelView 对象
-     * @param oldValue
-     *            WheelView 旧的条目值
-     * @param newValue
-     *            WheelView 新的条目值
+     *            开始滚动的 WheelView 对象
      */
-    void onChanged(WheelView wheel, int oldValue, int newValue);
+    void onScrollingStarted(WheelView wheel);
+
+    /**
+     * 在 WheelView 滚动结束的时候回调该接口
+     * 
+     * @param wheel
+     *            结束滚动的 WheelView 对象
+     */
+    void onScrollingFinished(WheelView wheel);
 }
